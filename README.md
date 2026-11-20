@@ -1,66 +1,89 @@
 # School Website
 
-This project is a simple school website built using HTML, CSS, JavaScript, and Node.js. It serves as an entry point for students, parents, and teachers to access important information and resources.
+A simple school website built with **HTML, CSS, JavaScript, and Express**. The project serves a static school website through a small Node.js web server.
+
+## Features
+
+- Static website served from the `public/` directory.
+- Express-based HTTP server.
+- Configurable port through the `PORT` environment variable.
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Node.js
+- Express
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (14 or later)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/demi-x29/school-website.git
+cd school-website
+npm install
+```
+
+### Run locally
+
+The root `server.js` file serves the `public/` directory:
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+To use a different port:
+
+```bash
+PORT=4000 npm start
+```
+
+On Windows PowerShell:
+
+```powershell
+$env:PORT=4000; npm start
+```
 
 ## Project Structure
 
-```
-school-website
-├── public
-│   ├── css
-│   │   └── styles.css
-│   ├── js
-│   │   └── scripts.js
+```text
+school-website/
+├── public/
+│   ├── css/
+│   ├── js/
 │   └── index.html
-├── src
+├── src/
 │   ├── app.js
-│   └── routes
-│       └── index.js
+│   └── routes/
+├── server.js
 ├── package.json
+├── package-lock.json
 ├── .gitignore
 └── README.md
 ```
 
-## Features
+## Development Notes
 
-- Responsive design for various devices
-- Interactive elements using JavaScript
-- Node.js backend for handling requests
+- Update `public/index.html` for page content.
+- Update styles in `public/css/`.
+- Update browser-side behavior in `public/js/`.
+- The root `server.js` is the current entry point used by `npm start`.
 
-## Setup Instructions
+## Future Improvements
 
-1. **Clone the repository:**
-   ```
-   git clone <repository-url>
-   ```
+- Add screenshots of the current interface.
+- Add automated tests.
+- Review and consolidate the duplicate Express entry points in `server.js` and `src/app.js`.
 
-2. **Navigate to the project directory:**
-   ```
-   cd school-website
-   ```
+---
 
-3. **Install dependencies:**
-   ```
-   npm install
-   ```
-
-4. **Run the application:**
-   ```
-   node src/app.js
-   ```
-
-5. **Open your browser and visit:**
-   ```
-   http://localhost:3000
-   ```
-
-## Usage
-
-- Modify the `public/index.html` file to change the content of the homepage.
-- Update `public/css/styles.css` to customize the styles.
-- Add interactivity through `public/js/scripts.js`.
-- Manage server-side logic in `src/app.js` and define routes in `src/routes/index.js`.
-
-## Contributing
-
-Feel free to submit issues or pull requests for improvements and features.
+This repository is an earlier web development project and is documented as such.
